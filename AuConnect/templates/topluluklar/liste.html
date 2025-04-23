@@ -15,16 +15,14 @@
 
     <div class="row">
         <div class="col-md-12">
-            
-            
             {% if topluluklar%}
 
-                {% for topluluklar in topluluklars %}
+                {% for topluluklar in topluluklar %}
 
                     <div class="card mb-3">
                         <div class="row">
                             <div class="col-md-3">
-                                <img class="card-img" src="{% static movie.get_image_path %}" alt="">
+                                <img class="card-img" src="{% static topluluklar.get_image_path %}" alt="">
                             </div>
                             <div class="col-md-9">
                                 <div class="card-body">
@@ -40,13 +38,11 @@
                 {% endfor %}
 
             {% else %}
-                
                 <div class="alert alert-warning">
                     <p>
                         No Topluluk
                     </p>
-                </div>
-            
+                </div>    
             {% endif %}
             
             
