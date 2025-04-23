@@ -1,6 +1,58 @@
 {% extends "layout.html" %}
+{% load static %}
 
 
 {% block content %}
-    <h1>Topluluklar</h1>
+    <div class="jumbotron">
+        <h1 class="display-4">AUConnect</h1>
+        <p class="lead">sosyal medya platformu</p>
+        <hr class="my-4">
+        <p>deneme deneme deneme</p>
+        <p class="lead">
+        </p>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+            
+            {% if topluluklar%}
+
+                {% for topluluklar in topluluklars %}
+
+                    <div class="card mb-3">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="card-img" src="{% static movie.get_image_path %}" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <div class="card-title">{{ topluluklar.name }}</div>
+                                    <p class="card-text">
+                                        {{ topluluklar.description }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+                
+                <div class="alert alert-warning">
+                    <p>
+                        No Topluluk
+                    </p>
+                </div>
+            
+            {% endif %}
+            
+            
+        </div>
+    </div>
+
+
+
 {% endblock %}

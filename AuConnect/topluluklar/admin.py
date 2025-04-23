@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Topluluklar
 
-# Register your models here.
+class ToplulukAdmin(admin.ModelAdmin):
+
+    list_display = ("id","name")
+
+admin.site.register(Topluluklar,ToplulukAdmin)
