@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+{% block content %}
+    
+    <div class="row">
+        <div class="col-md-3">
+            <img class="card-img" src="{% static topluluklar.get_image_path %}" alt="">
+        </div>
+        <div class="col-md-9">
+            <h1>{{ topluluklar.name }}</h1>
+            <hr>
+            <p>
+                {{ topluluklar.desription }}
+            </p>
+        </div>
+    </div>
+
+
+{% endblock %}
