@@ -15,9 +15,12 @@
     {% include 'partials/_navbar.html' %}
 
     <main>
-        {% block content %}
+        {% include 'partials/_alert.html' %}
+        <div class="container mt-4">
+            {% block content %}
 
-        {% endblock %}
+            {% endblock %}
+        </div>
     </main>
 
     <script src = "{% static 'js/jquery-3.4.1.min.js' %}"></script>
